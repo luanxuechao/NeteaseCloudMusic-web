@@ -22,7 +22,7 @@
                     <span><a hidefocus="true"  target="_blank" ><em>音乐人</em></a></span>
                 </li>
                 <li class="lst">
-                    <span><a ><em>下载客户端</em><sub class="cor">&nbsp;</sub></a></span><sup class="hot">1111</sup>
+                    <span><a ><em>下载客户端</em><sub class="cor">&nbsp;</sub></a></span><sup class="hot"><span >HOT</span></sup>
                 </li>
             </ul>
         </div>
