@@ -1,3 +1,6 @@
+html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, input, td, th, ins
+    padding: 0;
+    margin: 0;
 .g-topbar
     position: absolute;
     left: 0;
@@ -11,8 +14,8 @@
       box-sizing: border-box;
       background: #242424;
       border-bottom: 1px solid #000;
-      .warp
-        width: 100%;
+      .wrap
+        width: 1100px;
         margin: 0 auto;
       .f-cb:after
         clear: both;
@@ -25,18 +28,48 @@
         width: 176px;
         height: 69px;
         background-position: 0 0;
-        background:url("https://s2.music.126.net/style/web2/img/frame/topbar.png?3b704e3ab4863a7be717af9fcf90fa3c")
         a
           float: left;
           width: 157px;
           height: 100%;
           padding-right: 20px;
           text-indent: -9999px;
+            
           
 .m-nav
+  float: left;
   li
+    height: 70px;
+    color: #000000;
+    font-size: 14px;
     list-style: none;
     display: inline; 
-    float: left;    
+    padding: 0 19px;
+    float: left;
+    position: relative;
+    &:hover
+      background: #000000;
+    .lst
+  a
+    color: #cccccc;
+    text-decoration: none;
+    line-height: 70px;
+    cursor: pointer;
+  em 
+    font-style: normal;
+  .hot
+    display: block;
+    position: absolute;
+    top: 21px;
+    left: 100px;
+    width: 28px;
+    height: 19px;
+    background-position: -190 0;
+
+.m-top .logo, .m-nav .hot
+  background: url("https://s2.music.126.net/style/web2/img/frame/topbar.png?3b704e3ab4863a7be717af9fcf90fa3c") no-repeat 0 9999px;      
+        
+    
+
 
     
