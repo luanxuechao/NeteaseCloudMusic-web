@@ -35,7 +35,8 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
           padding-right: 20px;
           text-indent: -9999px;
             
-          
+.m-top .logo,.m-tophead,.m-srch .srchbg
+  background: url("https://s2.music.126.net/style/web2/img/frame/topbar.png?3b704e3ab4863a7be717af9fcf90fa3c") no-repeat 0 9999px;               
 .m-nav
   float: left;
   li
@@ -74,11 +75,141 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
     cursor: pointer;
   em 
     font-style: normal;
-
-.m-top .logo
-  background: url("https://s2.music.126.net/style/web2/img/frame/topbar.png?3b704e3ab4863a7be717af9fcf90fa3c") no-repeat 0 9999px;      
-        
+.f-pr
+  position: relative;
+.m-tophead
+  float: right;
+  height: 45px;
+  margin: 19px 0 0 20px;
+  padding: 0 22px 0 0;
+  background-position: right -47px;
+  .link
+    display: block;
+    width: 28px;
+    font-size: 12px;
+    margin-top: 7px;
+    color: #787878;
+    &:hover
+      color: #999;
+      text-decoration: underline;
     
+.m-tophead:hover .m-tlist
+  display: block;   
+.m-tlist
+    position: absolute;
+    top: 38px;
+    right: -43px;
+    width: 158px;
+    background: #2b2b2b;
+    border: 1px solid #202020;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
+    border-radius: 4px;
+    display: none;
+    .ltb
+      border: 1px solid #232323;
+      border-width: 1px 0;
+    .icn-mb
+      background-position: 0px 0px;
+    .icn-wx
+      background-position: -20px -20px;
+    .icn-qq
+      background-position: -20px -40px;
+    .icn-sn
+      background-position: 0 -20px;
+    .icn-wy
+      background-position: 0 -40px;  
+    .icn
+      float: left;
+      width: 18px;
+      height: 18px;
+      margin: 10px 10px 0 -7px;
+      background-image: url("https://s2.music.126.net/style/web2/img/frame/toplist.png?6142dd6c38ac75b47c0fe613abc69edb");
+      background-repeat: no-repeat;
+    li
+      float: left;
+      box-sizing: border-box;
+      width: 100%;
+      list-style: none;
+      &:hover
+        background: #333;
+        color: #999;
+      a
+        float: left;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 12px;
+      em
+        font-style: normal;  
+    a  
+      position: relative;
+      height: 38px;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding-left: 24px;
+      color: #ccc;
+      line-height: 39px;     
+        
+.m-toppvd
+  float: right;
+  width: 90px;
+  height: 32px;
+  margin: 19px 0 0 12px;
+  border-sizing: border-box;
+  padding-left: 16px;
+  border: 1px solid #4f4f4f;
+  line-height: 33px;
+  color: #ccc;
+  font-size: 12px;
+  border-radius: 20px;
+  &:hover
+   color: #ffffff;
+   border: 1px solid #ffffff;
+
+.m-srch
+  float: right;
+  width: 158px;
+  height: 32px;
+  .srchbg
+    float: right;
+    width: 158px;
+    height: 32px;
+    margin-top: 19px;
+    background-position: 0 -99px;
+    background-color: #fff;
+    border-radius: 32px;
+  .parent
+    display: block;
+    position: relative;
+    margin: 8px 0 0 30px;
+    input
+      width: 95%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      background: transparent;
+      color: #333;
+      line-height: 16px;
+      outline: none;
+    input:focus
+      background-color: yellow;
+    label
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      font-size: 12px;
+      color: #9b9b9b;
+      cursor: text;  
+  .txt  
+    border: 0;
+
+
 
 
     

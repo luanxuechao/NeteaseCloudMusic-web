@@ -25,6 +25,31 @@
                     <span><a ><em>下载客户端</em><sub class="cor">&nbsp;</sub></a></span><sup class="hot"><span >HOT</span></sup>
                 </li>
             </ul>
+            <div class="m-tophead f-pr">
+                <a class="link">登录</a>
+                <div class="m-tlist">
+                    <div class="inner">
+                        <ul class="f-cb">
+                            <li><a><i class="icn icn-mb"></i><em>手机号登录</em></a></li>
+                            <li class="ltb"><a><i class="icn icn-wx"></i><em>微信登录</em></a></li>
+                            <li><a><i class="icn icn-qq"></i><em>QQ登录</em></a></li>
+                            <li><a><i class="icn icn-sn"></i><em>新浪微博登录</em></a></li>
+                            <li><a><i class="icn icn-wy"></i><em>网易邮箱账号登录</em></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a class="m-toppvd f-pr">
+              创作者中心
+            </a>
+            <div class="m-srch f-pr">
+                <div class="srchbg">
+                    <span class="parent">
+                        <input type="text"  class="txt" value="" style="opacity: 1;">
+                        <label class="ph" >音乐/视频/电台/用户</label>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
