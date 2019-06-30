@@ -1,5 +1,5 @@
 <template>
-<div class="g-topbar">
+<div class="g-topbar f-cb">
   <div class="m-top">
     <div class="wrap ">
       <h1 class="logo f-cb">

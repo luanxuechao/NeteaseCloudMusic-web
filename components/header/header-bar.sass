@@ -2,7 +2,6 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
     padding: 0;
     margin: 0;
 .g-topbar
-    position: absolute;
     left: 0;
     z-index: 99;
     width: 100%;
@@ -92,6 +91,12 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
       display: block;
 .f-pr
   position: relative;
+.f-cb:after
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
 .m-tophead
   float: right;
   height: 45px;

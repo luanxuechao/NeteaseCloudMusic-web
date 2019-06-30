@@ -1,9 +1,18 @@
 <template>
   <div>
+    <header-bar />
     <nuxt />
   </div>
 </template>
 
+<script>
+import HeaderBar from '~/components/header/HeaderBar.vue'
+export default {
+  components: {
+    HeaderBar
+  }
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
