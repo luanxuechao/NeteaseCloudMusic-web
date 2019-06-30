@@ -98,7 +98,6 @@ export default {
       this.liIndex = index;
     },
     subnavliActive(index) {
-    console.log(index);
       this.subnavLiIndex = index;
     }
   }
