@@ -1,13 +1,13 @@
 html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, input, td, th, ins
     padding: 0;
-    margin: 0;  
+    margin: 0;
 .g-topbar
     position: absolute;
     left: 0;
-    z-index: 99; 
+    z-index: 99;
     width: 100%;
     margin-top: 0px;
-    .m-top 
+    .m-top
       position: relative;
       z-index: 1000;
       height: 70px;
@@ -34,9 +34,10 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
           height: 100%;
           padding-right: 20px;
           text-indent: -9999px;
-            
+
+
 .m-top .logo,.m-tophead,.m-srch .srchbg
-  background: url("https://s2.music.126.net/style/web2/img/frame/topbar.png?3b704e3ab4863a7be717af9fcf90fa3c") no-repeat 0 9999px;               
+  background: url("https://s2.music.126.net/style/web2/img/frame/topbar.png?3b704e3ab4863a7be717af9fcf90fa3c") no-repeat 0 9999px;
 .m-nav
   float: left;
   li
@@ -44,7 +45,7 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
     color: #000000;
     font-size: 14px;
     list-style: none;
-    display: inline; 
+    display: inline;
     padding: 0 19px;
     float: left;
     position: relative;
@@ -67,14 +68,28 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
         display: block;
         color: #ffffff;
         background: #ff0000;
-        text-align: center; 
+        text-align: center;
   a
     color: #cccccc;
     text-decoration: none;
     line-height: 70px;
     cursor: pointer;
-  em 
+  em
     font-style: normal;
+  .cor
+    position: absolute;
+    left: 50%;
+    top:  56px;
+    margin-left: -6px;
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-color: transparent transparent #C20C0C;
+    display: none;
+  .activeli
+    background: #000000;
+    .cor
+      display: block;
 .f-pr
   position: relative;
 .m-tophead
@@ -92,9 +107,9 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
     &:hover
       color: #999;
       text-decoration: underline;
-    
+
 .m-tophead:hover .m-tlist
-  display: block;   
+  display: block;
 .m-tlist
     position: absolute;
     top: 38px;
@@ -117,7 +132,7 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
     .icn-sn
       background-position: 0 -20px;
     .icn-wy
-      background-position: 0 -40px;  
+      background-position: 0 -40px;
     .icn
       float: left;
       width: 18px;
@@ -139,16 +154,16 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
         width: 100%;
         font-size: 12px;
       em
-        font-style: normal;  
-    a  
+        font-style: normal;
+    a
       position: relative;
       height: 38px;
       box-sizing: border-box;
       overflow: hidden;
       padding-left: 24px;
       color: #ccc;
-      line-height: 39px;     
-        
+      line-height: 39px;
+
 .m-toppvd
   float: right;
   width: 90px;
@@ -205,11 +220,54 @@ html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, 
       width: 90%;
       font-size: 12px;
       color: #9b9b9b;
-      cursor: text;  
-  .txt  
+      cursor: text;
+  .txt
     border: 0;
 
+.m-subnav
+  z-index: 90;
+  height: 35px;
+  background-color: #C20C0C;
+  box-sizing: border-box;
+  border-bottom: 1px solid #a40011;
+  .wrap
+    width: 1100px;
+    margin: 0 auto;
+    height: 34px;
+  .nav
+    float: left;
+    padding-left: 180px;
+    li
+      height: 34px;
+      float: left;
+      text-align: center;
+      list-style: none;
+    a
+      color: #fff
+      text-decoration: none;
+      height: 34px;
+      float: left;
+      text-align: center;
+      cursor: pointer;
+      em
+        height: 20px;
+        padding: 0 13px;
+        margin: 7px 17px 0;
+        border-radius: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        font-style: normal;
+        text-align: center;
+        display: inline-block;
+        &:hover
+          background-color: #9B0909;
+    .subnavliactive a em
+        background-color: #9B0909;
 
 
 
-    
+
+
+
+
+
