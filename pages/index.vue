@@ -21,7 +21,7 @@
     <div class='f-cb' style='width:980px;min-height:700px;margin:0 auto;border:1px solid #d3d3d3;border-width:0 1px;background:url(https://s2.music.126.net/style/web2/img/frame/wrap1.png?c0801643740ad93d9b5fdacba1a8a16f) repeat-y 100% 100%'>
         <div style='width:100%;float:left;margin-right:-250px;'>
             <div style='margin-right: 251px'>
-                <div style='padding:20px 20px 40px;'>
+                <div style='padding:20px 20px 0 20px;'>
                     <div style='height:33px;padding:0 10px 0 34px;border-bottom:2px solid #C10D0C'>
                         <div style='width:12px;height:12px;background:#ffffff;border-radius:50%;border:3px solid #C20C0C;display:inline-block;float:left;line-height:28px;margin:10px 10px 0 -20px;'>
                         </div>
@@ -60,59 +60,116 @@
                     </ul>
                 </div>
             </div>
-
         </div>
+        <div style='width:100%;float:left;margin-right:-250px;'>
+            <div style='margin-right: 251px'>
+                <div class='n-disk' style='padding:20px 0 0 40px;'>
+                    <div style='height:33px;padding:0 10px 0 34px;border-bottom:2px solid #C10D0C'>
+                        <div style='width:12px;height:12px;background:#ffffff;border-radius:50%;border:3px solid #C20C0C;display:inline-block;float:left;line-height:28px;margin:10px 10px 0 -20px;'>
+                        </div>
+                        <a href="/discover/playlist/"style ='float:left;font-size:20px;line-height:28px; color:#333;text-decoration: none; margin-left:-5px;'>新碟上架</a>
+                        <span style='float:right;margin-top:9px;'>
+                            <a href="/discover/playlist/?cat=%E7%94%B5%E5%AD%90" class="s-fc3">更多</a>
+                            <i class="cor s-bg s-bg-6">&nbsp;</i>
+                        </span>
+                    </div>
+                    <div style='position: relative;height:186px;margin:20px 0 37px;border:1px solid #d3d3d3'>
+                        <div style='height:184px;background:#f5f5f5;padding-left:16px;border:1px solid #fff'>
+                            <a class='click-flag pre s-bg s-bg-7'></a>
+                            <div class='roll f-pr'>
+                                <ul class="f-cb roller-flag" style="left: 0px; transition: none 0s ease 0s;" id="auto-id-1hkI8URlM6kOvgaK">
+                                    <li v-for='music in newMusicList'>
+                                        <div class="u-cover u-cover-alb1">
+                                            <img class="j-img"  :src="music.img">
+                                            <a :title="music.title" href="/album?id=79904422" class="msk"></a>
+                                            <a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="79904422" data-res-action="play"></a>
+                                        </div>
+                                        <p class="f-thide"><a :title="music.title" href="/album?id=79904422" class="s-fc0 tit">{{music.title}}</a></p>
+                                        <p class="tit f-thide" :title="music.player">
+                                            <a class="s-fc3" href="/artist?id=1060019">{{music.player}}</a>
+                                        </p>
+                                    </li>
+                                </ul>
 
+                            </div>
+                            <a class='click-flag nxt s-bg s-bg-8'></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </template>
-
 <script>
 import Logo from '~/components/Logo.vue'
 export default {
     components: {
         Logo
-    },                  
+    },
     data() {
         return {
-            musicList: [{
-                img: 'http://p1.music.126.net/ErQgdvaZlzOPHqOm0zYaDQ==/109951164190488147.jpg?param=140y140',
-                title: '华语｜聆听超级女声们的一往情深',
-                nb: '110万'
+            newMusicList:[{
+                img:'http://p3.music.126.net/qOzi5hQa9oxtn-A0YaRqUg==/109951164161475447.jpg?param=100y100',
+                title:'Joytime III',
+                player:'Marshmello'
             },{
-                img: 'http://p1.music.126.net/qCIKkb0XpYOTe1VRIUl58Q==/109951164151093867.jpg?param=140y140',
-                title: '饶舌时间 · 街拍靓仔至爱Rap',
-                nb: '32万'
-            },
-            {
-                img: 'http://p1.music.126.net/fhmefjUfMD-8qtj3JKeHbA==/18999560928537533.jpg?param=140y140',
-                title: '朴树、许巍、李健、郑钧、老狼、赵雷、',
-                nb: '926万'
-            },
-            {
-                img: 'http://p2.music.126.net/OfBgWFXj94z4tTXEI7oYog==/109951164187806275.jpg?param=140y140',
-                title: '没什么，都是我自己推开的',
-                nb: '1464'
-            },
-            {
-                img: 'http://p1.music.126.net/yXRr36_yIuPZhV0eNT8VLw==/109951164176862636.jpg?param=140y140',
-                title: '『云村热歌』评论10w+（全收录）',
-                nb: '2743万'
-            },
-            {
-                img: 'http://p2.music.126.net/LPn5U05DR-Uj9utXXszpNw==/109951164187119370.jpg?param=140y140',
-                title: '晚安，亲爱的你。',
-                nb: '653'
-            }
-            ,{
-                img: 'http://p1.music.126.net/1gNcBmzdIaQtU00Dvp_TvQ==/109951163912081772.jpg?param=140y140',
-                title: '好听到单曲循环',
-                nb: '1447万'
+                img:'http://p3.music.126.net/6Q0TwJbAqFmfoEZ76uAxOw==/109951164177750851.jpg?param=100y100',
+                title:'BTS WORLD OST ',
+                player:'BTS (防弹少年团) / V.A. / 屋顶月光 / 李贤'
             },{
-                img: 'http://p2.music.126.net/_9aPYCJxc-_gAu3Sd_6qsw==/18621328930234754.jpg?param=140y140',
-                title: '呓语 王贰浪',
-                nb: '375万'
+                img:'http://p4.music.126.net/OP4iOnJX00e_4dgPWwCeug==/109951164186397410.jpg?param=100y100',
+                title:'带着爸爸去留学',
+                player:'群星'
+            },
+            {
+                img:'http://p3.music.126.net/mXqmc1nD5mu2S4pEvBVHzw==/109951164141857357.jpg?param=100y100',
+                title:'我们在夏枝繁茂时再见',
+                player:'钱正昊'
+            },
+            {
+                img:'http://p4.music.126.net/ae3c2-_Dv7AaOmhELuMn_A==/109951164163755213.jpg?param=100y100',
+                title:'忘记拥抱',
+                player:'火箭少女101Sunee'
             }],
+            musicList: [{
+                    img: 'http://p1.music.126.net/ErQgdvaZlzOPHqOm0zYaDQ==/109951164190488147.jpg?param=140y140',
+                    title: '华语｜聆听超级女声们的一往情深',
+                    nb: '110万'
+                }, {
+                    img: 'http://p1.music.126.net/qCIKkb0XpYOTe1VRIUl58Q==/109951164151093867.jpg?param=140y140',
+                    title: '饶舌时间 · 街拍靓仔至爱Rap',
+                    nb: '32万'
+                },
+                {
+                    img: 'http://p1.music.126.net/fhmefjUfMD-8qtj3JKeHbA==/18999560928537533.jpg?param=140y140',
+                    title: '朴树、许巍、李健、郑钧、老狼、赵雷、',
+                    nb: '926万'
+                },
+                {
+                    img: 'http://p2.music.126.net/OfBgWFXj94z4tTXEI7oYog==/109951164187806275.jpg?param=140y140',
+                    title: '没什么，都是我自己推开的',
+                    nb: '1464'
+                },
+                {
+                    img: 'http://p1.music.126.net/yXRr36_yIuPZhV0eNT8VLw==/109951164176862636.jpg?param=140y140',
+                    title: '『云村热歌』评论10w+（全收录）',
+                    nb: '2743万'
+                },
+                {
+                    img: 'http://p2.music.126.net/LPn5U05DR-Uj9utXXszpNw==/109951164187119370.jpg?param=140y140',
+                    title: '晚安，亲爱的你。',
+                    nb: '653'
+                }, {
+                    img: 'http://p1.music.126.net/1gNcBmzdIaQtU00Dvp_TvQ==/109951163912081772.jpg?param=140y140',
+                    title: '好听到单曲循环',
+                    nb: '1447万'
+                }, {
+                    img: 'http://p2.music.126.net/_9aPYCJxc-_gAu3Sd_6qsw==/18621328930234754.jpg?param=140y140',
+                    title: '呓语 王贰浪',
+                    nb: '375万'
+                }
+            ],
             imgList: [{
                     url: 'http://p1.music.126.net/pXoXQ06sPYt0yqBq4Hko3Q==/109951164182800685.jpg',
                     background: 'url("http://p1.music.126.net/-2NyaGYG49DnGcPOUu-Gvg==/109951164184914153.jpg") repeat-x'
@@ -137,13 +194,9 @@ export default {
             background: 'url("http://p1.music.126.net/-2NyaGYG49DnGcPOUu-Gvg==/109951164184914153.jpg") repeat-x'
         }
     },
-    beforeCreate() {
-        console.log(this.imgList)
-    },
+    beforeCreate() {},
     methods: {
         beforeChange(from, to) {
-            console.log(to)
-            console.log(this.imgList)
             this.background = this.imgList[to].background;
         }
     },
@@ -230,7 +283,10 @@ export default {
     height: 0;
     visibility: hidden;
 }
-
+a {
+    text-decoration: none;
+    color: #333;
+}
 .s-fc3 {
     color: #666;
     font-size: 12px;
@@ -249,12 +305,20 @@ export default {
     vertical-align: middle;
 }
 
-.s-bg-6 {
+.s-bg,.n-disk li {
     background: url('https://s2.music.126.net/style/web2/img/index/index.png?3f8dff64809e0bff8246c41ef867b1a0')
 }
 
-.s-bg {
+.s-bg-6 {
     background-position: 0 -240px;
+}
+
+.s-bg-7 {
+    background-position: -260px -75px;
+}
+
+.s-bg-8 {
+    background-position: -300px -75px;
 }
 
 .m-cvrlst {
@@ -289,11 +353,13 @@ export default {
 }
 
 .u-cover .bottom,
+.u-cover .msk,
 .msk {
     background: url('https://s2.music.126.net/style/web2/img/coverall.png?fdbd0d1abb947db559f13f8771ce44b9') no-repeat;
 }
 
 .u-cover .icon-play,
+.u-cover-alb1 .icon-play,
 .u-cover .icon-headset {
     background: url('https://s2.music.126.net/style/web2/img/iconall.png?7d696a83b957a41929c2906a750f8764') no-repeat;
 }
@@ -369,5 +435,96 @@ export default {
 .s-fc0,
 a.s-fc0:hover {
     color: #000;
+}
+
+.n-disk .pre {
+    left: 4px;
+}
+
+.n-disk .nxt {
+    right: 4px;
+}
+
+.n-disk .pre,
+.n-disk .nxt {
+    position: absolute;
+    top: 71px;
+    width: 17px;
+    height: 17px;
+}
+
+.n-disk .roll {
+    float: left;
+    width: 654px;
+    height: 180px;
+    overflow: hidden;
+}
+
+.f-pr {
+    position: relative;
+}
+.n-disk ul {
+    position: absolute;
+    top: 0;
+    width: 645px;
+    margin: 28px 0 0 0;
+}
+.n-disk li {
+    float: left;
+    display: inline;
+    width: 118px;
+    height: 150px;
+    margin-left: 11px;
+    background: #f5f5f5;
+}
+.n-disk .u-cover {
+    margin-bottom: 7px;
+}
+.u-cover-alb1 {
+    width: 100px;
+    height: 100px;
+}
+
+
+.u-cover-alb1 .msk {
+    width: 118px;
+    height: 100px;
+    background-position: 0 -570px;
+}
+.u-cover-alb1 .icon-play, .u-cover-alb2 .icon-play, .u-cover-alb3 .icon-play {
+    display: none;
+}
+.u-cover-0 .icon-play, .u-cover-alb1 .icon-play, .u-cover-10 .icon-play, .u-cover-11 .icon-play, .u-cover-12 .icon-play {
+    left: 72px;
+    width: 22px;
+    height: 22px;
+    background-position: 0 -85px;
+}
+.u-cover .icon-play {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 16px;
+    height: 17px;
+    background-position: 0 0;
+}
+.n-disk p {
+    width: 90%;
+    line-height: 18px;
+}
+.f-thide {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.s-fc0, a.s-fc0:hover {
+    color: #000;
+}
+.u-cover-alb1:hover a {
+    display:block;
+}
+.n-disk li .s-fc0,.n-disk li .s-fc3{
+    font-size:12px;
 }
 </style>
