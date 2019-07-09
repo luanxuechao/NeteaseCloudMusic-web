@@ -2,7 +2,7 @@
 <div>
     <div class="container" :style='{"width":"100%","background":background}'>
         <div class="rotation-banner" style='width:800px;margin:0 auto; height:336px'>
-            <a-carousel :beforeChange='beforeChange' autoplay arrows>
+            <a-carousel :beforeChange='beforeChange' autoplay arrows easing='null'>
                 <div slot="prevArrow" slot-scope="props" class="custom-slick-arrow" style="left: 10px;zIndex: 1">
                     <a-icon type="left-circle" />
                 </div>
@@ -11,7 +11,7 @@
                 </div>
                 <div v-for='img in imgList'>
                     <img :src='img.url'>
-            </div>
+                </div>
             </a-carousel>
             <div class='bbbbb' style='position:relative;width:254px;height:336px;top:-342px;left:787px;background:url(https://s2.music.126.net/style/web2/img/index/download.png?3e14ec5cff66059654bc51c3cb7c9f48'>
                 <p style='position:absolute;top:300px;left:10px;color:#8d8d8d;text-align:center;font-size:12px;'>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
@@ -25,7 +25,7 @@
                     <div style='height:33px;padding:0 10px 0 34px;border-bottom:2px solid #C10D0C'>
                         <div style='width:12px;height:12px;background:#ffffff;border-radius:50%;border:3px solid #C20C0C;display:inline-block;float:left;line-height:28px;margin:10px 10px 0 -20px;'>
                         </div>
-                        <a href="/discover/playlist/"style ='float:left;font-size:20px;line-height:28px; color:#333;text-decoration: none; margin-left:-5px;'>热门推荐</a>
+                        <a href="/discover/playlist/" style='float:left;font-size:20px;line-height:28px; color:#333;text-decoration: none; margin-left:-5px;'>热门推荐</a>
                         <div style='float:left;margin:7px 0 0 20px'>
                             <a href="/discover/playlist/?cat=%E5%8D%8E%E8%AF%AD" class="s-fc3">华语</a>
                             <span class="line">|</span>
@@ -46,7 +46,7 @@
                         <li v-for='music in musicList'>
                             <div class="u-cover u-cover-1">
                                 <img :src="music.img">
-                                <a :title="music.title"  class="msk" ></a>
+                                <a :title="music.title" class="msk"></a>
                                 <div class="bottom">
                                     <a class="icon-play f-fr" title="播放"></a>
                                     <span class="icon-headset"></span>
@@ -67,7 +67,7 @@
                     <div style='height:33px;padding:0 10px 0 34px;border-bottom:2px solid #C10D0C'>
                         <div style='width:12px;height:12px;background:#ffffff;border-radius:50%;border:3px solid #C20C0C;display:inline-block;float:left;line-height:28px;margin:10px 10px 0 -20px;'>
                         </div>
-                        <a href="/discover/playlist/"style ='float:left;font-size:20px;line-height:28px; color:#333;text-decoration: none; margin-left:-5px;'>新碟上架</a>
+                        <a href="/discover/playlist/" style='float:left;font-size:20px;line-height:28px; color:#333;text-decoration: none; margin-left:-5px;'>新碟上架</a>
                         <span style='float:right;margin-top:9px;'>
                             <a href="/discover/playlist/?cat=%E7%94%B5%E5%AD%90" class="s-fc3">更多</a>
                             <i class="cor s-bg s-bg-6">&nbsp;</i>
@@ -80,7 +80,7 @@
                                 <ul class="f-cb roller-flag" style="left: 0px; transition: none 0s ease 0s;" id="auto-id-1hkI8URlM6kOvgaK">
                                     <li v-for='music in newMusicList'>
                                         <div class="u-cover u-cover-alb1">
-                                            <img class="j-img"  :src="music.img">
+                                            <img class="j-img" :src="music.img">
                                             <a :title="music.title" href="/album?id=79904422" class="msk"></a>
                                             <a href="javascript:;" class="icon-play f-alpha f-fr" title="播放" data-res-type="19" data-res-id="79904422" data-res-action="play"></a>
                                         </div>
@@ -98,13 +98,13 @@
                 </div>
             </div>
         </div>
-        <div style='width:100%;float:left;margin-right:-250px;'>
-            <div style='margin-right: 251px'>
+        <div style='width:100%;float:left;margin-right:-250px; padding-botton:40px;'>
+            <div style='margin-right: 251px;padding-bottom:40px;'>
                 <div class='n-disk' style='padding:20px 0 0 20px;'>
                     <div style='height:33px;padding:0 10px 0 34px;border-bottom:2px solid #C10D0C'>
                         <div style='width:12px;height:12px;background:#ffffff;border-radius:50%;border:3px solid #C20C0C;display:inline-block;float:left;line-height:28px;margin:10px 10px 0 -20px;'>
                         </div>
-                        <a href="/discover/playlist/"style ='float:left;font-size:20px;line-height:28px; color:#333;text-decoration: none; margin-left:-5px;'>榜单</a>
+                        <a href="/discover/playlist/" style='float:left;font-size:20px;line-height:28px; color:#333;text-decoration: none; margin-left:-5px;'>榜单</a>
                         <span style='float:right;margin-top:9px;'>
                             <a href="/discover/playlist/?cat=%E7%94%B5%E5%AD%90" class="s-fc3">更多</a>
                             <i class="cor s-bg s-bg-6">&nbsp;</i>
@@ -113,113 +113,35 @@
                     </div>
                 </div>
                 <div class='n-bilst' style='height:472px;margin-left:20px;margin-top:20px;padding-left:1px;background:url(https://s2.music.126.net/style/web2/img/index/index_bill.png?27898822202dd91666825306aaafe8a4) no-repeat'>
-                    <dl class='blk'>
+                    <dl class='blk'  v-for='rankMusic in rankMusicList'>
                         <dt class="top">
-                            <div class="cver u-cover u-cover-4" >
-                                <img class="j-img" data-src="http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100" src="http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100">
-                                <a href="/discover/toplist?id=19723756" class="msk" title="云音乐飙升榜"></a>
+                            <div class="cver u-cover u-cover-4">
+                                <img class="j-img" :src="rankMusic.imgUri">
+                                <a href="/discover/toplist?id=19723756" class="msk" :title="rankMusic.rankTitle"></a>
                             </div>
                             <div class="tit">
-                                <a href="/discover/toplist?id=19723756" title="云音乐飙升榜"><h3 class="f-fs1 f-thide">云音乐飙升榜</h3></a>
-                                    <div class="btn">
-                                        <a href="javascript:;" class="s-bg s-bg-9 f-tdn" hidefocus="true" title="播放" >播放</a>
-                                        <a href="javascript:;" hidefocus="true" class="s-bg s-bg-10 f-tdn subscribe-flag " title="收藏">收藏</a>
-                                    </div>
+                                <a href="/discover/toplist?id=19723756" :title="rankMusic.rankTitle">
+                                    <h3 class="f-fs1 f-thide">{{rankMusic.rankTitle}}</h3>
+                                </a>
+                                <div class="btn">
+                                    <a href="javascript:;" class="s-bg s-bg-9 f-tdn" hidefocus="true" title="播放">播放</a>
+                                    <a href="javascript:;" hidefocus="true" class="s-bg s-bg-10 f-tdn subscribe-flag " title="收藏">收藏</a>
+                                </div>
                             </div>
                         </dt>
                         <dd>
                             <ol>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
+                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="" v-for='(music,index) in rankMusic.musicList'>
+                                    <span  :class='index>2?"no":"no no-top"'>{{ index+1 }}</span>
+                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">{{music.title}}</a>
                                     <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
-                                    </div>
-                                </li>
-                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="">
-                                    <span class="no no-top">1</span>
-                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">木偶人</a>
-                                    <div class="oper">
-                                        <a href="#" class="s-bg s-bg-11" title="播放" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="play" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表" hidefocus="true" data-res-type="18" data-res-id="1374051000" data-res-action="addto" data-res-from="31" data-res-data="3779629"></a>
-                                        <a href="#" class="s-bg s-bg-12" title="收藏" hidefocus="true" data-res-level="0" data-res-fee="0" data-res-type="18" data-res-id="1374051000" data-res-action="subscribe"></a>
+                                        <a href="#" class="s-bg s-bg-11" title="播放"></a>
+                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表"></a>
+                                        <a href="#" class="s-bg s-bg-12" title="收藏"></a>
                                     </div>
                                 </li>
                             </ol>
+                            <div class="more"><a href="/discover/toplist?id=19723756" class="s-fc0">查看全部&gt;</a></div>
                         </dd>
                     </dl>
                 </div>
@@ -318,6 +240,110 @@ export default {
                 {
                     url: 'http://p1.music.126.net/ACx0cRp6puBheqiczJX-IA==/109951164184895787.jpg',
                     background: 'url("http://p1.music.126.net/C5OA7pTsXTlsO31cMgOZng==/109951164184895792.jpg") repeat-x'
+                }
+            ],
+            rankMusicList: [{
+                    rankTitle: '云音乐飙升榜',
+                    imgUri: 'http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100',
+                    musicList: [{
+                            title: '关于遇见你-蘇山海',
+                        },
+                        {
+                            title: 'Wayward One',
+                        },
+                        {
+                            title: '沉迷',
+                        },
+                        {
+                            title: '这是我一生中最勇敢的瞬间',
+                        }, {
+                            title: '闻妖',
+                        },
+                        {
+                            title: '无名之辈',
+                        },
+                        {
+                            title: '头号任务',
+                        },
+                        {
+                            title: 'bad guy',
+                        },
+                        {
+                            title: '碧海问舟',
+                        },
+                        {
+                            title: '失去',
+                        }
+                    ]
+
+                }, {
+                    rankTitle: '云音乐新歌榜',
+ imgUri: 'http://p4.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100',
+                    musicList: [{
+                            title: '关于遇见你-蘇山海',
+                        },
+                        {
+                            title: 'Wayward One',
+                        },
+                        {
+                            title: '沉迷',
+                        },
+                        {
+                            title: '这是我一生中最勇敢的瞬间',
+                        }, {
+                            title: '闻妖',
+                        },
+                        {
+                            title: '无名之辈',
+                        },
+                        {
+                            title: '头号任务',
+                        },
+                        {
+                            title: 'bad guy',
+                        },
+                        {
+                            title: '碧海问舟',
+                        },
+                        {
+                            title: '失去',
+                        }
+                    ]
+
+                },
+                {
+                    rankTitle: '云音乐原创榜',
+                     imgUri: 'http://p4.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100',
+                    musicList: [{
+                            title: '关于遇见你-蘇山海',
+                        },
+                        {
+                            title: 'Wayward One',
+                        },
+                        {
+                            title: '沉迷',
+                        },
+                        {
+                            title: '这是我一生中最勇敢的瞬间',
+                        }, {
+                            title: '闻妖',
+                        },
+                        {
+                            title: '无名之辈',
+                        },
+                        {
+                            title: '头号任务',
+                        },
+                        {
+                            title: 'bad guy',
+                        },
+                        {
+                            title: '碧海问舟',
+                        },
+                        {
+                            title: '失去',
+                        }
+                    ]
                 }
             ],
             background: 'url("http://p1.music.126.net/-2NyaGYG49DnGcPOUu-Gvg==/109951164184914153.jpg") repeat-x'
@@ -476,19 +502,26 @@ a {
 .s-bg-12 {
     background-position: -297px -268px;
 }
-.u-icn, .u-icn2, .u-icn3 {
+
+.u-icn,
+.u-icn2,
+.u-icn3 {
     display: inline-block;
     overflow: hidden;
     vertical-align: middle;
 }
-.u-icn, .u-title-1 .out .icon {
+
+.u-icn,
+.u-title-1 .out .icon {
     background: url('https://s2.music.126.net/style/web2/img/icon.png?fabd0804bcfa70ec1d6b5305281eaf7b') no-repeat 0 9999px;
 }
+
 .u-icn-81 {
     width: 13px;
     height: 13px;
     background-position: 0 -700px;
 }
+
 .m-cvrlst {
     margin: 20px 0 0 -42px;
 }
@@ -717,6 +750,7 @@ a.s-fc0:hover {
 
 .n-bilst .blk {
     float: left;
+    font-size:12px;
     width: 230px;
 }
 
@@ -754,6 +788,10 @@ a.s-fc0:hover {
     margin-right: 10px;
     text-indent: -9999px;
 }
+.n-bilst .tit h3 {
+    width: 100%;
+    font-weight: bold;
+}
 
 .n-bilst .btn a:hover {
     color: #eee;
@@ -769,15 +807,9 @@ a.s-fc0:hover {
     height: 32px;
     list-style: none
 }
-.z-hvr {
-    display:inline;
-}
-.z-hvr:hover .oper {
-   display: block;
-}
 
-.n-bilst ol .no-top {
-    color: #c10d0c;
+.z-hvr:hover .oper {
+    display: block;
 }
 
 .n-bilst ol .no {
@@ -791,18 +823,26 @@ a.s-fc0:hover {
     font-size: 16px;
 }
 
+.n-bilst ol .no-top {
+    color: #c10d0c;
+}
+
 .n-bilst ol .nm {
     float: left;
     width: 170px;
     height: 32px;
 }
+.n-bilst ol li:hover .nm {
+    width: 96px;
+}
 
 .n-bilst ol .oper {
-    display: block;
+    display: none;
     float: right;
     width: 82px;
-    margin-top: -23px;
+    margin-top: 7px;
 }
+
 .n-bilst ol .oper a {
     float: left;
     width: 17px;
@@ -813,4 +853,14 @@ a.s-fc0:hover {
 .n-bilst ol .oper .u-icn-81 {
     margin: 2px 6px 0 0;
 }
+
+.n-bilst .more {
+    clear: both;
+    height: 32px;
+    margin-right: 32px;
+    font-size: 12px;
+    text-align: right;
+    line-height: 32px;
+}
+
 </style>

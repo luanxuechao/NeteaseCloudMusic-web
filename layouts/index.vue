@@ -2,14 +2,17 @@
   <div>
     <header-bar />
     <nuxt />
+    <footer-bar/>
   </div>
 </template>
 
 <script>
 import HeaderBar from '~/components/header/HeaderBar.vue'
+import FooterBar from '~/components/footer/FooterBar.vue'
 export default {
   components: {
-    HeaderBar
+    HeaderBar,
+    FooterBar
   }
 }
 </script>
