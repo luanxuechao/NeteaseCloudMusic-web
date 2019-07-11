@@ -1,29 +1,20 @@
 <template>
-<div class='carousel'>
+<div class='carousel' :style='{"background":imgList[activeIndex].background}'>
     <div class='carousel-content carousel-re'>
         <div class='carousel-nav'>
-            <a class="btnl"></a>
-            <a class="btnr"></a>
-            <img src='http://p1.music.126.net/pXoXQ06sPYt0yqBq4Hko3Q==/109951164182800685.jpg'>
+            <a class="btnl" v-on:click='prev'></a>
+            <a class="btnr" v-on:click='next'></a>
+            <img :src='imgList[activeIndex].url'>
             <div class='carousel-dot'>
                 <ol>
-                    <li>
-                        <div class='dot'></div>
-                    </li>
-                    <li>
-                        <div class='dot'></div>
-                    </li>
-                    <li>
-                        <div class='dot'></div>
-                    </li>
-                    <li>
-                        <div class='dot'></div>
+                    <li v-for='(img,index) in imgList'>
+                        <div class='dot' v-on:click="activeIndex = index":style='index===activeIndex?"background:#C20C0C":""'></div>
                     </li>
                 </ol>
             </div>
         </div>
         <div class='carousel-banner'>
-            <p style=>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+            <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
         </div>
 
     </div>
@@ -37,18 +28,34 @@
 <script>
 export default {
     name: "Carousel",
+    props: {
+        imgList: Array
+    },
     data() {
         return {
-            liIndex: 0,
-            subnavLiIndex: 0,
+            activeIndex: 0,
+            length:0
         }
     },
+    created() {
+      this.length = this.imgList.length;
+      setInterval(this.next,10000)
+    },
     methods: {
-        liActive(index) {
-            this.liIndex = index;
+        prev() {
+            if (this.activeIndex - 1 < 0) {
+                this.activeIndex =this.length - 1;
+            } else {
+                this.activeIndex--;
+            }
+
         },
-        subnavliActive(index) {
-            this.subnavLiIndex = index;
+        next() {
+            if (this.activeIndex +1 > this.length-1) {
+                this.activeIndex =0;
+            } else {
+                this.activeIndex++;
+            }
         }
     }
 

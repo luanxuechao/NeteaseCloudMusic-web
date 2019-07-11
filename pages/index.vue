@@ -1,7 +1,7 @@
 <template>
 <div>
     <div style ='width:100%;height:336px;'>
-    <carousel/>
+    <carousel :img-list ='imgList'/>
     </div>
 </div>
 </template>
