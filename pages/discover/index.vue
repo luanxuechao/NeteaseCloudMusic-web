@@ -109,7 +109,6 @@
                             <a href="/discover/playlist/?cat=%E7%94%B5%E5%AD%90" class="s-fc3">更多</a>
                             <i class="cor s-bg s-bg-6">&nbsp;</i>
                         </span>
-
                     </div>
                 </div>
                 <div class='n-bilst' style='height:472px;margin-left:20px;margin-top:20px;padding-left:1px;background:url(https://s2.music.126.net/style/web2/img/index/index_bill.png?27898822202dd91666825306aaafe8a4) no-repeat'>
