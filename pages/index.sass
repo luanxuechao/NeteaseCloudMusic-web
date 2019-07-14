@@ -1,5 +1,12 @@
 a
     font-size: 12px
+.f-cb:after 
+    clear: both
+    content: '.'
+    display: block
+    height: 0
+    visibility: hidden
+  
 .container
     width: 980px
     min-height: 700px 
@@ -41,7 +48,35 @@ a
                         height: 12px
                         margin-left: 4px
                         vertical-align: middle
-  
+            .m-cvrlst
+                margin: 20px 0 0 -42px;
+                li
+                    float: left
+                    display: inline-block
+                    width: 182px
+                    height: 234px
+                    overflow: hidden
+                    padding: 0 0 30px 50px
+                    line-height: 1.4
+                    .dec
+                        margin: 8px 0 3px
+                        font-size: 14px
+                    .tit
+                        display: inline-block;
+                        max-width: 100%
+                        width: 100%
+                        vertical-align: middle
+                        font-size: 14px
+        .new-music
+            position: relative
+            height: 186px
+            margin: 20px 0px 37px 0px
+            border: 1px solid #d3d3d3
+            .new-music-container
+                height: 184px
+                background: #f5f5f5
+                padding-left: 16px
+                border: 1px solid #fff
 
 
 .round-dot
@@ -56,9 +91,268 @@ a
 .s-fc3
     color: #666
 
-.s-bg
+.s-bg,
+.n-disk li 
     background: url('https://s2.music.126.net/style/web2/img/index/index.png?3f8dff64809e0bff8246c41ef867b1a0')
 
 .s-bg-6 
     background-position: 0 -240px
+
+.u-cover .bottom,
+.u-cover .msk,
+.msk 
+    background: url('https://s2.music.126.net/style/web2/img/coverall.png?fdbd0d1abb947db559f13f8771ce44b9') no-repeat
+
+.u-cover .icon-play,
+.u-cover-alb1 .icon-play,
+.u-cover .icon-headset 
+    background: url('https://s2.music.126.net/style/web2/img/iconall.png?7d696a83b957a41929c2906a750f8764') no-repeat
+.u-cover-1 
+    width: 140px
+    height: 140px
+    .msk
+        background-position: 0 0
+
+.u-cover
+    position: relative
+    display: block
+    img
+        display: block
+        width: 100%
+        max-width: 100%
+        height: 100%
+    .msk
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    .bottom
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 27px
+        background-position: 0 -537px
+        color: #ccc
+    .icon-play
+        position: absolute
+        right: 10px
+        bottom: 5px
+        width: 22px
+        font-size: 12px
+        height: 17px
+        background-position: 0 0
+    .icon-headset
+        float: left
+        width: 14px
+        font-size: 12px
+        height: 11px
+        background-position: 0 -24px
+        margin: 9px 5px 9px 10px
+.nb 
+    float: left;
+    font-size: 12px;
+    margin: 6px 0 0 0;
+
+.s-fc0,
+a.s-fc0:hover 
+    color: #000
+.n-disk
+    .roll
+        float: left;
+        width: 654px;
+        height: 180px;
+        overflow: hidden;
+    .pre
+        left: 4px;
+    .nxt
+        right: 4px;
+    .pre,.nxt 
+        position: absolute;
+        top: 71px;
+        width: 17px;
+        height: 17px;
+
+    ul
+        position: absolute;
+        top: 0;
+        width: 645px;
+        margin: 28px 0 0 0;
+    li
+        float: left;
+        display: inline;
+        width: 118px;
+        height: 150px;
+        margin-left: 11px;
+        background: #f5f5f5;
+        list-style: none;
+    .u-cover
+        margin-bottom: 7px;
+    p 
+    width: 90%;
+    line-height: 18px;
+
+
+.f-thide 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+
+.u-cover-alb1 .icon-play,
+.u-cover-alb2 .icon-play,
+.u-cover-alb3 .icon-play 
+    display: none;
+.u-cover-0 .icon-play,
+.u-cover-alb1 .icon-play,
+.u-cover-10 .icon-play,
+.u-cover-11 .icon-play,
+.u-cover-12 .icon-play 
+    left: 72px;
+    width: 22px;
+    height: 22px;
+    background-position: 0 -85px;
+
+.u-cover-alb1 
+    width: 100px;
+    height: 100px;
+    &:hover a 
+        display: block;
+
+    .msk
+        width: 118px;
+        height: 100px;
+        background-position: 0 -570px;
+.f-pr 
+    position: relative;
+.s-bg-6 
+    background-position: 0 -240px;
+
+
+.s-bg-7 
+    background-position: -260px -75px;
+
+
+.s-bg-8 
+    background-position: -300px -75px;
+
+
+.s-bg-9 
+    background-position: -267px -205px;
+
+
+.s-bg-9:hover 
+    background-position: -267px -235px;
+
+
+.s-bg-10 
+    background-position: -300px -205px;
+
+
+.s-bg-10:hover 
+    background-position: -300px -235px;
+
+
+.s-bg-11 
+    background-position: -267px -268px;
+
+
+.s-bg-12 
+    background-position: -297px -268px;
+
+.n-bilst
+    height: 472px
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 689px
+    background: url(https://s2.music.126.net/style/web2/img/index/index_bill.png?27898822202dd91666825306aaafe8a4) no-repeat
+    .blk
+        float: left;
+        font-size: 12px;
+    .top 
+        height: 100px;
+        padding: 20px 0 0 19px;
+        margin-bottom: 20px;
+    .cver 
+        float: left;
+        display: inline;
+    .tit 
+        float: left;
+        width: 116px;
+        margin: 6px 0 0 10px;
+        h3
+            width: 100%;
+            font-weight: bold;
+    .btn
+        margin-top: 10px;
+        a
+            display: block;
+            float: left;
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            text-indent: -9999px;
+            &:hover
+                color: #eee;
+    ol 
+        height: 319px;
+        margin-left: 50px;
+        line-height: 32px;
+        li
+            height: 32px;
+            list-style: none
+        .no 
+            float: left;
+            position: relative;
+            width: 35px;
+            height: 32px;
+            margin-left: -35px;
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+        .no-top
+            color: #c10d0c;
+        .nm
+            float: left;
+            width: 170px;
+            height: 32px;
+            &:hover
+                width: 96px;
+        .oper
+            display: none;
+            float: right;
+            width: 82px;
+            margin-top: 7px;
+            a 
+                float: left;
+                width: 17px;
+                height: 17px;
+                margin-right: 10px;
+            .u-icn-81
+                margin: 2px 6px 0 0;
+    .more
+        clear: both;
+        height: 32px;
+        margin-right: 32px;
+        font-size: 12px;
+        text-align: right;
+        line-height: 32px;
+.u-cover-4 
+    width: 80px;
+    height: 80px;
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+   
            

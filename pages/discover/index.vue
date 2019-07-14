@@ -90,7 +90,6 @@
                                         </p>
                                     </li>
                                 </ul>
-
                             </div>
                             <a class='click-flag nxt s-bg s-bg-8'></a>
                         </div>

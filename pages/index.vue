@@ -26,9 +26,102 @@
                         <i class="cor s-bg s-bg-6">&nbsp;</i>
                     </span>
                 </div>
+                <ul class='m-cvrlst f-cb'>
+                    <li v-for='music in musicList'>
+                        <div class="u-cover u-cover-1">
+                            <img :src="music.img">
+                            <a :title="music.title" class="msk"></a>
+                            <div class="bottom">
+                                <a class="icon-play f-fr" title="播放"></a>
+                                <span class="icon-headset"></span>
+                                <span class="nb">{{music.nb}}</span>
+                            </div>
+                        </div>
+                        <p class="dec">
+                            <a :title="music.title" class="tit s-fc0">{{music.title}}</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class='hot-music'>
+                <div class='hot-music-menu'>
+                    <div class='round-dot'>
+                    </div>
+                    <a class='hot-recommend'>新碟上架</a>
+                    <span class='more'>
+                        <a href="/discover/playlist/?cat=%E7%94%B5%E5%AD%90" class="s-fc3">更多</a>
+                        <i class="cor s-bg s-bg-6">&nbsp;</i>
+                    </span>
+                </div>
+                <div class='new-music'>
+                    <div class='new-music-container n-disk'>
+                        <a class='click-flag pre s-bg s-bg-7'></a>
+                        <div class='roll f-pr'>
+                            <ul class="f-cb" style="left: 0px; transition: none 0s ease 0s;">
+                                <li v-for='music in newMusicList'>
+                                    <div class="u-cover u-cover-alb1">
+                                        <img :src="music.img">
+                                        <a :title="music.title" href="/album?id=79904422" class="msk"></a>
+                                        <a href="javascript:;" class="icon-play f-alpha f-fr" title="播放"></a>
+                                    </div>
+                                    <p class="f-thide"><a :title="music.title" href="/album?id=79904422" class="s-fc0 tit">{{music.title}}</a></p>
+                                    <p class="tit f-thide" :title="music.player">
+                                        <a class="s-fc3" href="/artist?id=1060019">{{music.player}}</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class='click-flag nxt s-bg s-bg-8'></a>
+                    </div>
+                </div>
+            </div>
+            <div class='hot-music'>
+                <div class='hot-music-menu'>
+                    <div class='round-dot'>
+                    </div>
+                    <a class='hot-recommend'>榜单</a>
+                    <span class='more'>
+                        <a href="/discover/playlist/?cat=%E7%94%B5%E5%AD%90" class="s-fc3">更多</a>
+                        <i class="cor s-bg s-bg-6">&nbsp;</i>
+                    </span>
+                </div>
+                <div class='n-bilst'>
+                    <dl class='blk'  v-for='rankMusic in rankMusicList'>
+                        <dt class="top">
+                            <div class="cver u-cover u-cover-4">
+                                <img class="j-img" :src="rankMusic.imgUri">
+                                <a href="/discover/toplist?id=19723756" class="msk" :title="rankMusic.rankTitle"></a>
+                            </div>
+                            <div class="tit">
+                                <a href="/discover/toplist?id=19723756" :title="rankMusic.rankTitle">
+                                    <h3 class="f-fs1 f-thide">{{rankMusic.rankTitle}}</h3>
+                                </a>
+                                <div class="btn">
+                                    <a href="javascript:;" class="s-bg s-bg-9 f-tdn" hidefocus="true" title="播放">播放</a>
+                                    <a href="javascript:;" hidefocus="true" class="s-bg s-bg-10 f-tdn subscribe-flag " title="收藏">收藏</a>
+                                </div>
+                            </div>
+                        </dt>
+                        <dd>
+                            <ol>
+                                <li onmouseover="this.className='z-hvr'" onmouseout="this.className=''" class="" v-for='(music,index) in rankMusic.musicList'>
+                                    <span  :class='index>2?"no":"no no-top"'>{{ index+1 }}</span>
+                                    <a href="/song?id=1374051000" class="nm s-fc0 f-thide" title="木偶人">{{music.title}}</a>
+                                    <div class="oper">
+                                        <a href="#" class="s-bg s-bg-11" title="播放"></a>
+                                        <a href="#" class="u-icn u-icn-81" title="添加到播放列表"></a>
+                                        <a href="#" class="s-bg s-bg-12" title="收藏"></a>
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="more"><a href="/discover/toplist?id=19723756" class="s-fc0">查看全部&gt;</a></div>
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </template>
 
