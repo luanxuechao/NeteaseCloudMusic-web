@@ -2,7 +2,6 @@
   <div>
     <header-bar />
     <nuxt />
-    <footer-bar/>
   </div>
 </template>
 
