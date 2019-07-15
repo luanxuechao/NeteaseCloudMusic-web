@@ -3,7 +3,7 @@
   <div style='width:100%;height:336px;'>
     <carousel :img-list='imgList' />
   </div>
-  <div class='container'>
+  <div class='container f-cb'>
     <div class='content'>
       <div class='hot-music'>
         <div class='hot-music-menu'>
