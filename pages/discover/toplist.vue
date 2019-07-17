@@ -54,10 +54,11 @@
                                 （每天更新）
                             </span>
                         </div>
-                        <div style='margin-bottom: 25px;margin-right: 10px;'class='f-cb'>
-                            <a class="u-btn2 u-btn2-2 u-btni-addply f-fl" style='float: left;color: #fff;background-position: right -428px;text-decoration: none;padding: 0 5px 0 0;display: inline-block;height: 31px;line-height: 31px;vertical-align: top;text-align: center;cursor: pointer;'>
-                                <i style='display: inline-block;height: 31px;line-height: 31px;overflow: hidden;line-height: 32px;vertical-align: top;text-align: center;cursor: pointer;'><em class="ply"></em>播放</i>
+                        <div class='btns f-cb'>
+                            <a class="u-btn2 u-btn2-2 u-btni-addply f-fl" >
+                                <i style=''><em class="ply"></em>播放</i>
                             </a>
+                            <a href="" class="u-btni u-btni-add"></a>
                         </div>
                     </div>
                 </div>
