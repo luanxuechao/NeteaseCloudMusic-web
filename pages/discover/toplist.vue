@@ -55,10 +55,26 @@
                             </span>
                         </div>
                         <div class='btns f-cb'>
-                            <a class="u-btn2 u-btn2-2 u-btni-addply f-fl" >
+                            <a class="u-btn2 u-btn2-2 u-btni-addply f-fl">
                                 <i style=''><em class="ply"></em>播放</i>
                             </a>
                             <a href="" class="u-btni u-btni-add"></a>
+                            <a class='u-collect'>
+                                <i class="iconfont">&#xe601;</i>
+                                (2090957)
+                            </a>
+                            <a class='u-collect'>
+                                <i class="iconfont">&#xe602;</i>
+                                (6095)
+                            </a>
+                            <a class='u-collect'>
+                                <i class="iconfont">&#xe677;</i>
+                                下载
+                            </a>
+                            <a class='u-collect'>
+                                <i class="iconfont">&#xe600;</i>
+                                (1000)
+                            </a>
                         </div>
                     </div>
                 </div>
