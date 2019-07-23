@@ -80,6 +80,53 @@
                 </div>
             </div>
         </div>
+        <div class='g-wrap12'>
+            <div class='u-title-1 u-title f-cb'>
+                <h3><span class='f-ff2'>歌曲列表</span></h3>
+                <span class='sub'>100首歌</span>
+                <span class='more'>播放：<strong>2150490112</strong>次</span>
+            </div>
+            <div>
+                <table class='m-table m-table-rank'>
+                    <thead>
+                        <tr>
+                            <th class="first w1"></th>
+                            <th>
+                                <div class="wp">标题</div>
+                            </th>
+                            <th class="w2-1">
+                                <div class="wp">时长</div>
+                            </th>
+                            <th class="w3">
+                                <div class="wp">歌手</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="13770782011563882533889" class="even ">
+                            <td>
+                                <div class="hd"><span class="num">1</span>
+                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
+                                </div>
+                            </td>
+                            <td class="rank">
+                                <div class="f-cb">
+                                    <div class="tt"><a href="/song?id=1377078201"><img class="rpic" src="http://p1.music.126.net/MLXjdgJQb5Zra2K_UbkhEw==/109951164219640182.jpg?param=50y50&amp;quality=100"></a><span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
+                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class=" s-fc3"><span class="u-dur ">03:37</span>
+                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add"  title="添加到播放列表" ></a><span class="icn icn-fav" title="收藏"></span><span   class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
+                            </td>
+                            <td class="">
+                                <div class="text" title="苏晗"><span title="苏晗"><a class="" >苏晗</a></span></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <div>
     </div>
