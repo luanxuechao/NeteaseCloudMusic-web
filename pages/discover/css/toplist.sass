@@ -188,7 +188,7 @@ a
 .f-ff2 
     font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif
     color: #333
-.m-table th,.m-table .ply
+.m-table th,.m-table .ply,.m-table .icn
     background: url("https://s2.music.126.net/style/web2/img/table.png?007b2aa16bec51538ab3c499ca0c4e5b") no-repeat 0 9999px
 .m-table 
     width: 100%
@@ -255,6 +255,55 @@ a
     b
         font-weight: normal
         color: #333
+    .hshow
+        display: none;
+    .opt 
+        float: left;
+        padding: 0px;
+    .u-icn-81 
+        float: left
+        margin-top: 2px;
+        width: 13px;
+        height: 13px;
+        background-position: 0 -700px;
+    .icn-fav 
+        background-position: 0 -174px;
+    .icn
+        float: left;
+        width: 18px;
+        height: 16px;
+        margin: 2px 0 0 4px;
+        overflow: hidden;
+        text-indent: -999px;
+        cursor: pointer;
+    .icn-share 
+        background-position: 0 -195px;
+    .icn-dl 
+        background-position: -81px -174px;
+    tr 
+        &:hover
+            .s-fc3
+                padding: 0px;
+            .hshow
+                display: block;
+            .u-dur
+                display: none; 
+    .text 
+        width: 100%;
+        position: relative;
+        zoom: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        a 
+            color: #333
+            &:hover
+                text-decoration: underline
+
+
+
+    
+
 
 
 table 
@@ -279,17 +328,19 @@ table
     .rank
         padding-top: 10px;
         padding-bottom: 10px;
+        .ply
+            margin-top: 17px;
+        .ttc 
+            margin-top: 16px;
     .rpic
         float: left;
         width: 50px;
         height: 50px;
         margin-right: 14px;
-    .ply
-        margin-top: 17px;
-    .ttc 
-        margin-top: 16px;
     .txt
         max-width: 75%;
+    .u-dur
+        height: 20px
 
 
 .u-icn, .u-title-1 .out .icon 
