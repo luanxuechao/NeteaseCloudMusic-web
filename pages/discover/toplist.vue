@@ -103,199 +103,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr  class="even ">
+                        <tr :class='index%2===0?"even":""'  v-for='(track,index) in rankData.playlist.tracks'>
                             <td>
-                                <div class="hd"><span class="num">1</span>
+                                <div class="hd"><span class="num">{{index+1}}</span>
                                     <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
                                 </div>
                             </td>
-                            <td class="rank">
+                            <td :class='index>2?"":"rank"'>
                                 <div class="f-cb">
-                                    <div class="tt"><a href="/song?id=1377078201"><img class="rpic" src="http://p1.music.126.net/MLXjdgJQb5Zra2K_UbkhEw==/109951164219640182.jpg?param=50y50&amp;quality=100"></a><span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
+                                    <div class="tt"><a :style='{"display":index>2?"none":"block"}'><img class="rpic" :src='track.al.picUrl'></a><span  class="ply ">&nbsp;</span>
+                                        <div class="ttc"><span class="txt"><a ><b :title="track.name">{{track.name}}</b></a></span></div>
                                     </div>
                                 </div>
                             </td>
                             <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
+                                <span class="u-dur">{{track.dt|timefilter('mm:ss')}}</span>
                                 <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
                             </td>
                             <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                         <tr  class="">
-                            <td>
-                                <div class="hd"><span class="num">2</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="rank">
-                                <div class="f-cb">
-                                    <div class="tt"><a href="/song?id=1377078201"><img class="rpic" src="http://p1.music.126.net/MLXjdgJQb5Zra2K_UbkhEw==/109951164219640182.jpg?param=50y50&amp;quality=100"></a><span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                         <tr  class="even ">
-                            <td>
-                                <div class="hd"><span class="num">3</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="rank">
-                                <div class="f-cb">
-                                    <div class="tt"><a href="/song?id=1377078201"><img class="rpic" src="http://p1.music.126.net/MLXjdgJQb5Zra2K_UbkhEw==/109951164219640182.jpg?param=50y50&amp;quality=100"></a><span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                        <tr  class="">
-                            <td>
-                                <div class="hd"><span class="num">4</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="">
-                                <div class="f-cb">
-                                    <div class="tt">
-                                        <span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                         <tr  class="">
-                            <td>
-                                <div class="hd"><span class="num">4</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="">
-                                <div class="f-cb">
-                                    <div class="tt">
-                                        <span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                         <tr  class="">
-                            <td>
-                                <div class="hd"><span class="num">4</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="">
-                                <div class="f-cb">
-                                    <div class="tt">
-                                        <span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                         <tr  class="">
-                            <td>
-                                <div class="hd"><span class="num">4</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="">
-                                <div class="f-cb">
-                                    <div class="tt">
-                                        <span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                         <tr  class="">
-                            <td>
-                                <div class="hd"><span class="num">4</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="">
-                                <div class="f-cb">
-                                    <div class="tt">
-                                        <span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
-                            </td>
-                        </tr>
-                         <tr  class="">
-                            <td>
-                                <div class="hd"><span class="num">4</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
-                                </div>
-                            </td>
-                            <td class="">
-                                <div class="f-cb">
-                                    <div class="tt">
-                                        <span data-res-id="1377078201" data-res-type="18" data-res-action="play" class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a href="/song?id=1377078201"><b title="离岸">离岸</b></a></span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="s-fc3">
-                                <span class="u-dur">03:09</span>
-                                <div class="opt hshow"><a class="u-icn u-icn-81 icn-add" title="添加到播放列表"></a><span class="icn icn-fav" title="收藏"></span><span class="icn icn-share" title="分享"></span><span class="icn icn-dl" title="下载"></span></div>
-                            </td>
-                            <td class="">
-                                <div class="text" title="苏晗"><span title="苏晗"><a class="">苏晗</a></span></div>
+                                <div class="text" title=""><span title=""><a class="">{{track.ar[0].name}}</a></span></div>
                             </td>
                         </tr>
                     </tbody>
@@ -313,7 +139,16 @@
 </style>
 
 <script>
+import {
+    rankDetail
+} from '~/resources/top.js'
 export default {
+    async asyncData() {
+        const {data} = await rankDetail(3);
+        return {
+            rankData:data
+        }
+    },
     data() {
         return {
             rankList: [{
