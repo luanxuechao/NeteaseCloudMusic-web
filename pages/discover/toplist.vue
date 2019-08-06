@@ -106,13 +106,23 @@
                         <tr :class='index%2===0?"even":""'  v-for='(track,index) in rankData.playlist.tracks'>
                             <td>
                                 <div class="hd"><span class="num">{{index+1}}</span>
-                                    <div class="rk "><span class="ico u-icn u-icn-73 s-fc9">5</span></div>
+                                    <div class="rk ">
+                                        <span class="ico u-icn u-icn-73 s-fc9" :style='{"display":rankData.playlist.trackIds[index].lr && rankData.playlist.trackIds[index].lr>index ?"":"none"}'>{{rankData.playlist.trackIds[index].lr -index}}</span>
+                                        <span class="u-icn u-icn-75" :style='{"display":!rankData.playlist.trackIds[index].lr ?"":"none"}'></span>
+                                        <span class="ico u-icn u-icn-74 s-fc10" :style='{"display":rankData.playlist.trackIds[index].lr && rankData.playlist.trackIds[index].lr<index ?"":"none"}'>{{index - rankData.playlist.trackIds[index].lr }}</span>
+                                    </div>
+                                    
                                 </div>
                             </td>
                             <td :class='index>2?"":"rank"'>
                                 <div class="f-cb">
                                     <div class="tt"><a :style='{"display":index>2?"none":"block"}'><img class="rpic" :src='track.al.picUrl'></a><span  class="ply ">&nbsp;</span>
-                                        <div class="ttc"><span class="txt"><a ><b :title="track.name">{{track.name}}</b></a></span></div>
+                                        <div class="ttc">
+                                        <span class="txt">
+                                        <a><b :title="track.name">{{track.name}}</b></a>
+                                        <span  class="s-fc8" :style='{"display":track.alia.length>0?"":"none"}'> - ({{track.alia[0]}})</span>
+                                        <span title="播放mv" class="mv" :style='{"display":track.mv>0?"":"none"}'></span>
+                                        </span></div>
                                     </div>
                                 </div>
                             </td>
